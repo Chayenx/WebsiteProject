@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+nav {
+    background-color: #fa8f8f;
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+}
+.menu li a.products,
+.menu li a:hover {
+    color: #af45af;
+    background: #f7e6e3;
+}
+.nav .fa-shopping-cart{
+    position: relative;
+}
+.cartcount{
+    position:absolute;
+    top: 5px;
+    right: 7.5rem;
+    height: -15px;
+    width: 15px;
+    background: #a883b1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fa2929;
+    font-size: 13px;
+}
+.containerr{
+    width: 90%;
+    margin: 0 auto ;
+    display: flex;
+    padding: 20px;
+   
+}
+.sidebar{
+    width: 20%;
+    padding: 20px;
+    background: #df8484;
+    display: flex;
+    flex-direction: column;
+}
+.product{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(4,1fr);
+    background:#ecd1d1;
+    
+    
+}
+.sidebar-search{
+    padding: 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    background: #f7e6e3;
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+.sidebar-search:focus{
+    border: 2px solid #b74ed1;
+}
+.sidebar-item{
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #b75a5a;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align:center ;
+    transition: 300ms;
+    font-size: 1.2vw;
+}
+.sidebar-item:hover{
+    color:#fff;
+    background: #7a4488;
+}
+.box{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.box:hover{
+    transform: scale(1.02);
+}
+.img{
+    width: 100%;
+    height: 17vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.modal,
+.modal-bg{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.modal-page{
+    min-width:30vw;
+    max-height: 50vw;
+    max-width: 60vw;
+    background: #e9e7e3;
+    border-radius: 25px;
+    padding: 20px;
+    z-index: 99;
+    
+}
+.modal-content{
+    display: flex;
+    width: 100%;
+}
+.modal-detel{
+    margin-left: 20px;
+    
+}
+.modall-img{
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    border:10px;
+}
+
+.btn-coltro{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+   
+}
+.btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    transition: 0.3s;
+    color: black;
+    margin: 10px;
+    background: #f2a1bc;
+}
+.btn-buy{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    transition: 0.3s;
+    background: linear-gradient(#e61b36,#9c1032);
+    color: white;
+    margin: 10px;
+}
+.carlist-item{
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.box-left{
+    display: flex;
+}
+.box-right{
+    display: flex;
+    align-items: center;
+}
+.box-left img{
+    width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.bntc{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid#0c0c0c;
+    cursor:all-scroll;
+}

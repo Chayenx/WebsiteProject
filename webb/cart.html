@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Shop</title>
+        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="nav-con">
+                    <div class="logo"><a href="#">BABY KIDS SHOP</a></div>
+                    <ul class="menu">
+                        <li><a class="home" href="index.html">Home</a></li>
+                        <li><a class="products" href="cart.html">Products</a></li>
+                        <li><a class="contac" href="contac.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a onclick="opencart()" href="" class="car"><i class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                            <div id="cartcount" class="cartcount" style="display: none;" >
+                                0
+                            </div></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+        <section class="containerr">
+            <div class="sidebar">
+                <input onkeyup="searchh(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search somthing">
+                <a onclick="serachproduct('all')" class="sidebar-item">
+                    สินค้าทั้งหมด
+                </a>
+                <a onclick="serachproduct('new')" class="sidebar-item">
+                    สินค้ามาใหม่
+                </a>
+                <a onclick="serachproduct('newd')" class="sidebar-item">
+                    สินค้าขายดี
+                </a>
+                <a onclick="serachproduct('aa')" class="sidebar-item">
+                   เสริมสร้างพัฒนาการ
+                </a>
+                <a onclick="serachproduct('aaa')" class="sidebar-item">
+                    อุปกรณ์อาบน้ำ
+                </a>
+                <a onclick="serachproduct('aab')" class="sidebar-item">
+                    ขวดนมและอุปกรณ์
+                </a>
+                <a onclick="serachproduct('aac')" class="sidebar-item">
+                    อุปกรณ์เดินทาง
+                </a>
+                <a onclick="serachproduct('aad')" class="sidebar-item">
+                    โต๊ะทานข้าว
+                </a>
+                <a onclick="serachproduct('aaf')" class="sidebar-item">
+                    เครื่องนอน
+                </a>
+            </div>
+            <div id="productlis" class="product">
+                <div  class="box">
+                    <img class="img" src="https://storage.chiangmaibabyshop.com/2021/11/NB_MFPL1-1-300x300.png" alt="">
+                        <p style="font-size: 1.2vw">Nuebabe หมอนเมมโมรี่โฟม แบบกลม</p>
+                        <p style="font-size: 1vw">319 THB</p>
+                </div>
+            </div>           
+        </section>
+        <div id="modalDes" class="modal" style="display: none;">
+            <div onclick="closeModall()" class="modal-bg"></div>
+            <div class="modal-page">
+                <h2>รายละเอียดสินค้า</h2>
+                <br>
+                <div class="modal-content">
+                    <img id="mdd-img" class="modall-img" src="https://storage.chiangmaibabyshop.com/2021/11/NB_MFPL1-1-300x300.png" alt="">
+                    <div class="modal-detel">
+                        <h3 id="mdd-name" style="font-size: 1.5vw;">Nuebabe หมอนเมมโมรี่โฟม แบบกลม</h3>
+                        <p id="mdd-price" style="font-size: 1.3vw;"> ราคา 319 THB</p>
+                        <br>
+                        <p  id="mdd-desc" style="color: #adadad;"></p>
+                        <br>
+                        <div class="btn-coltro">
+                            <button onclick="closeModall()" class="btn">
+                                ยกเลิก
+                            </button>
+                            <button onclick="addtocart()" class="btn-buy">
+                                เพิ่มลงรถเข็น
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalcart" class="modal " style="display: none;">
+            <div onclick="closeModall()" class="modal-bg"></div>
+            <div class="modal-page">
+                <h2>รถเข็นสินค้า</h2>
+                <br>
+                <div id="mycart" class="carlist">
+                    <div class="carlist-item">
+                        <div class="box-left">
+                            <img class="img-g" src="https://storage.chiangmaibabyshop.com/2021/11/NB_MFPL1-1-300x300.png" alt="">
+                            <div class="box-detel">
+                                <p style="font-size: 1.5vw;">product</p>
+                                <p style="font-size: 1.2vw;">ราคา 318 THB</p>
+                            </div>
+                        </div>
+                        <div class="box-right">
+                            <p class="bntc">-</p>
+                            <p style="margin: 0 20px;">1</p>
+                            <p class="bntc">+</p>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="btn-coltro">
+                    <button onclick="closeModall()" class="btn">
+                        ยกเลิก
+                    </button>
+                    <button class="btn-buy">
+                        สั่งซื้อ
+                    </button>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>    
